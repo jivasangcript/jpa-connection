@@ -1,1 +1,24 @@
+spring:
+  datasource:
+    somedb:
+      jdbc-url: jdbc:mysql://localhost:3306/redonearth_android
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 111111
 
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    properties:
+      hibernate:
+        format_sql: true
+    generate-ddl: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
