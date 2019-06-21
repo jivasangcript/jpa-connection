@@ -1,8 +1,8 @@
 spring:
   datasource:
     somedb:
-      jdbc-url: jdbc:mysql://localhost:3306/redonearth_android
-      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/redonearth_android?useUnicode=yes&characterEncoding=UTF-8&useSSL=false
+      driver-class-name: com.mysql.jdbc.Driver
       username: root
       password: 111111
 

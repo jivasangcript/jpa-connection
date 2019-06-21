@@ -35,7 +35,7 @@ public class JpaConfig {
             EntityManagerFactoryBuilder builder,
             @Qualifier("dataSource") DataSource dataSource) {
 
-        return builder.dataSource(dataSource).packages("com.jsonobject.jpademo").build();
+        return builder.dataSource(dataSource).packages("com.redonearth.jpaconnection").build();
     }
 
     @Bean(name = "transactionManager")
