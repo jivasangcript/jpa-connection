@@ -1,10 +1,9 @@
 package com.redonearth.jpaconnection;
 
-import lombok.Data;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-import javax.persistence.*;
-
-@Data
 @Entity
 @Table(name = "user")
 public class User {
@@ -36,5 +35,14 @@ public class User {
 
     public void setUserEmail(String userEmail) {
         this.userEmail = userEmail;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userID='" + userID + '\'' +
+                ", userPassword='" + userPassword + '\'' +
+                ", userEmail='" + userEmail + '\'' +
+                '}';
     }
 }
