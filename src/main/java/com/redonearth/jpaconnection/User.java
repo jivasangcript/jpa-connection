@@ -1,16 +1,24 @@
 package com.redonearth.jpaconnection;
 
+import lombok.ToString;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "user")
+@ToString
 public class User {
 
     @Id
     private String userID;
+
+    @Column(name = "userPassword", nullable = false)
     private String userPassword;
+
+    @Column(name = "userEmail", nullable = false)
     private String userEmail;
 
     public String getUserID() {
@@ -35,14 +43,5 @@ public class User {
 
     public void setUserEmail(String userEmail) {
         this.userEmail = userEmail;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "userID='" + userID + '\'' +
-                ", userPassword='" + userPassword + '\'' +
-                ", userEmail='" + userEmail + '\'' +
-                '}';
     }
 }
